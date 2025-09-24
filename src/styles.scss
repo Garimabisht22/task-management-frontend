@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+// Keep your existing styles
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Add our custom styles below
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow-x: hidden;
+}
+
+// Custom Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+// Glass morphism effect
+.glass {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+// Gradient text
+.gradient-text {
+  background: linear-gradient(45deg, #3f9fff, #ff728a) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+// Override Material styles for our theme
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(45deg, #3f9fff, #ff728a) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  background: linear-gradient(45deg, #2196F3, #E91E63) !important;
+}
+
+// Form field customization for dark theme
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-outline-color: rgba(255, 255, 255, 0.3);
+  --mdc-outlined-text-field-hover-outline-color: rgba(255, 255, 255, 0.5);
+  --mdc-outlined-text-field-focus-outline-color: #3f9fff;
+  --mdc-outlined-text-field-label-text-color: rgba(255, 255, 255, 0.7);
+  --mdc-outlined-text-field-input-text-color: white;
+}
+
+.mat-mdc-form-field .mat-mdc-floating-label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-floating-label {
+  color: #3f9fff !important;
+}
